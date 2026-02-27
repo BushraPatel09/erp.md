@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Backup & Recovery Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cloud Backup & Recovery Dashboard</h1>
+    <p>Single module: Backup & Recovery</p>
+  </header>
+  <main>
+    <section class="cards">
+      <article><h3>Total Backups</h3><p id="totalBackups">0</p></article>
+      <article><h3>Active Jobs</h3><p id="activeJobs">0</p></article>
+      <article><h3>Failed Jobs</h3><p id="failedJobs">0</p></article>
+      <article><h3>Storage Used (GB)</h3><p id="storageUsed">0</p></article>
+    </section>
+
+    <section class="grid">
+      <div>
+        <h2>Backup Jobs</h2>
+        <table>
+          <thead><tr><th>Name</th><th>Type</th><th>Status</th><th>Schedule</th></tr></thead>
+          <tbody id="jobsTable"></tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Live Events</h2>
+        <ul id="liveFeed"></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Storage Growth</h2>
+      <canvas id="storageChart" height="80"></canvas>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
